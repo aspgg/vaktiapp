@@ -77,7 +77,7 @@ const {
 } = useSafeCall(nearByPlaces);
 
 function isPlaceMatch(place: GenericPlace): place is PlaceMatchWithCountry {
-  return Boolean('matchingString' in place);
+  return 'matchingString' === place.name;
 }
 
 function country2flag(countryCode: string) {
