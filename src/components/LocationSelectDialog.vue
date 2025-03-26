@@ -24,7 +24,7 @@ const isOpen = computed<boolean>(() => {
 });
 
 function isPlaceMatch(place: GenericPlace): place is PlaceMatchWithCountry {
-  return 'matchingString' in place;
+  return 'matchingString' === place.name;
 }
 
 const hasCurrentPlace = computed<boolean>(() => Boolean(currentPlace.value));
